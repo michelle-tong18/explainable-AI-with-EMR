@@ -1,0 +1,86 @@
+wynton_dir: '/your_project_path'
+scs_dir: '/your_project_path/git-explainable-AI-with-EMR'
+cohort_name: LBP_cohort
+version: 'v1' # default prelim_exploration
+
+cohort_data_dir:     ${scs_dir}/data/${cohort_name}_${version}/info_commons_database
+mri_dir:             ${scs_dir}/original_data/MRI
+prepped_data_dir:    ${scs_dir}/data/${cohort_name}_${version}/preprocessed_data
+analysis_output_dir: ${scs_dir}/analysis/${cohort_name}_${version}/project_outputs
+
+query_output_dir: ${cohort_data_dir}/database_query_results
+sample_images_dir: ${cohort_data_dir}/images_prelim_sample
+analysis_data_dir: ${prepped_data_dir}/analysis_database
+
+# FOR DATA 
+file_directory:
+  # FOR DATA EXTRACTION
+  accessionnumber_csv: ${query_output_dir}/AccessionNumberList.csv
+  patientdurablekey_csv: ${query_output_dir}/PatientDurableKeyList.csv
+
+  patdurabledim_csv: ${query_output_dir}/cohort_patdurabledim.csv
+  billingaccountfact_csv: ${query_output_dir}/cohort_billingaccountfact.csv
+  diagnosisterminologydim_csv: ${query_output_dir}/cohort_diagnosisterminologydim.csv
+  diagnosiseventfact_csv: ${query_output_dir}/cohort_diagnosiseventfact.csv
+  imagingfact_csv: ${query_output_dir}/cohort_imagingfact.csv
+  procedureeventfact_csv: ${query_output_dir}/cohort_procedureeventfact.csv
+  referraleventfact_csv: ${query_output_dir}/cohort_referraleventfact.csv
+  medicationorderfact_csv: ${query_output_dir}/cohort_medicationorderfact.csv
+
+  note_metadata_csv: ${query_output_dir}/cohort_note_metadata.csv
+  note_concepts_csv: ${query_output_dir}/cohort_note_concepts.csv
+  note_text_csv: ${query_output_dir}/cohort_note_text.csv
+
+  patdurabledim_parquet: ${query_output_dir}/cohort_patdurabledim.parquet
+  billingaccountfact_parquet: ${query_output_dir}/cohort_billingaccountfact.parquet
+  diagnosisterminologydim_parquet: ${query_output_dir}/cohort_diagnosisterminologydim.parquet
+  diagnosiseventfact_parquet: ${query_output_dir}/cohort_diagnosiseventfact.parquet
+  imagingfact_parquet: ${query_output_dir}/cohort_imagingfact.parquet
+  procedureeventfact_parquet: ${query_output_dir}/cohort_procedureeventfact.parquet
+  referraleventfact_parquet: ${query_output_dir}/cohort_referraleventfact.parquet
+  medicationorderfact_parquet: ${query_output_dir}/cohort_medicationorderfact.parquet
+
+  note_metadata_parquet: ${query_output_dir}/cohort_note_metadata.parquet
+  note_concepts_parquet: ${query_output_dir}/cohort_note_concepts.parquet
+  note_text_parquet: ${query_output_dir}/cohort_note_text.parquet
+
+  imagingmetadata_csv: ${query_output_dir}/20240801_dcm_dirlist_t1sag_t1ax_t2sag_t2ax_all_seqs.csv
+  
+  # FOR ANALYSIS - SELECTED INFO
+  imagingmetadata_t1sag_analysis_csv: ${analysis_data_dir}/t1_sag_mri.csv
+  imagingmetadata_t1ax_analysis_csv: ${analysis_data_dir}/t1_ax_mri.csv
+  imagingmetadata_t2sag_analysis_csv: ${analysis_data_dir}/t2_sag_mri.csv
+  imagingmetadata_t2ax_analysis_csv: ${analysis_data_dir}/t2_ax_mri.csv
+
+  interventiontype_multilabel_analysis_csv: ${analysis_data_dir}/analysis_interventiontype_mutlilabel.csv
+  interventiontype_singlelabel_analysis_csv: ${analysis_data_dir}/analysis_interventiontype_singlelabel.csv
+  
+  interventiontype_multilabel_analysis_parquet: ${analysis_data_dir}/analysis_interventiontype_mutlilabel.parquet
+  interventiontype_singlelabel_analysis_parquet: ${analysis_data_dir}/analysis_interventiontype_singlelabel.parquet
+  
+  # FOR ANALYSIS - CLEANED DATA
+  patdurabledim_analysis_csv: ${analysis_data_dir}/analysis_patdurabledim.csv
+  billingaccountfact_analysis_csv: ${query_output_dir}/analysis_billingaccountfact.csv
+  diagnosiseventfact_analysis_csv: ${analysis_data_dir}/analysis_diagnosiseventfact.csv
+  imagingfact_analysis_csv: ${analysis_data_dir}/analysis_imagingfact.csv
+  procedureeventfact_analysis_csv: ${analysis_data_dir}/analysis_procedureeventfact.csv
+  referraleventfact_analysis_csv: ${analysis_data_dir}/analysis_referraleventfact.csv
+  medicationorderfact_analysis_csv: ${analysis_data_dir}/analysis_medicationorderfact.csv
+  
+  note_text_analysis_csv: ${query_output_dir}/analysis_note_text.csv
+  
+  patdurabledim_analysis_parquet: ${analysis_data_dir}/analysis_patdurabledim.parquet
+  billingaccountfact_analysis_parquet: ${query_output_dir}/analysis_billingaccountfact.parquet
+  diagnosiseventfact_analysis_parquet: ${analysis_data_dir}/analysis_diagnosiseventfact.parquet
+  imagingfact_analysis_parquet: ${analysis_data_dir}/analysis_imagingfact.parquet
+  procedureeventfact_analysis_parquet: ${analysis_data_dir}/analysis_procedureeventfact.parquet
+  referraleventfact_analysis_parquet: ${analysis_data_dir}/analysis_referraleventfact.parquet
+  medicationorderfact_analysis_parquet: ${analysis_data_dir}/analysis_medicationorderfact.parquet
+  
+  note_text_analysis_parquet: ${query_output_dir}/analysis_note_text.parquet
+  
+  # FOR OUTPUTS
+  model_output_dir: ${analysis_output_dir}/MODEL/INDEPENDENT_VAR 
+  
+  
+  
