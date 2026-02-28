@@ -38,4 +38,4 @@ git clone git@github.com:michelle-tong18/explainable-AI-with-EMR.git
 Distributed under the MIT License. See LICENSE.txt for more information.
 
 ## Citations
-* Tong MW, et al. .doi: [TBD](TBD)
+* Tong MW, Ziegeler K, Kreutzinger V, Majumdar S. Explainable AI reveals tissue pathology and psychosocial drivers of opioid prescription for non-specific chronic low back pain. Sci Rep 15, 30690 (2025).  .doi: [https://doi.org/10.1038/s41598-025-13619-7](10.1038/s41598-025-13619-7)
